@@ -38,28 +38,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="sfmlnet-audio-2">
-      <HintPath>..\..\..\..\..\May\LaurentGomila-SFML.Net-85a5369\lib\x86\sfmlnet-audio-2.dll</HintPath>
+      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\sfmlnet-audio-2.dll</HintPath>
     </Reference>
     <Reference Include="sfmlnet-graphics-2">
-      <HintPath>..\..\..\..\..\May\LaurentGomila-SFML.Net-85a5369\lib\x86\sfmlnet-graphics-2.dll</HintPath>
+      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\sfmlnet-graphics-2.dll</HintPath>
     </Reference>
     <Reference Include="sfmlnet-window-2">
-      <HintPath>..\..\..\..\..\May\LaurentGomila-SFML.Net-85a5369\lib\x86\sfmlnet-window-2.dll</HintPath>
+      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\sfmlnet-window-2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="Tao.FreeGlut, Version=2.4.0.2, Culture=neutral, PublicKeyToken=6e602a6ad6c0d06d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\backup\a\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.FreeGlut.dll</HintPath>
+    <Reference Include="Tao.FreeGlut">
+      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.FreeGlut.dll</HintPath>
     </Reference>
-    <Reference Include="Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\backup\a\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Debug\Tao.OpenGl.dll</HintPath>
+    <Reference Include="Tao.OpenGl">
+      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.OpenGl.dll</HintPath>
     </Reference>
     <Reference Include="Tao.OpenGl.Glu">
-      <HintPath>..\..\..\..\backup\a\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.OpenGl.Glu.dll</HintPath>
+      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.OpenGl.Glu.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -145,16 +143,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SFMLStart\SFMLStart\SFMLStart.csproj">
-      <Project>{c8df8299-2b2e-415b-849e-4cbbc1cb4aa6}</Project>
-      <Name>SFMLStart</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\VeeTileEngine2012\VeeTileEngine2012.csproj">
-      <Project>{a68469e8-c7af-483e-bd92-285661a049e8}</Project>
-      <Name>VeeTileEngine2012</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="csfml-audio-2.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -170,6 +158,16 @@
     <Content Include="openal32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SFMLStart\SFMLStart.csproj">
+      <Project>{c8df8299-2b2e-415b-849e-4cbbc1cb4aa6}</Project>
+      <Name>SFMLStart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VeeTileEngine2012\VeeTileEngine2012.csproj">
+      <Project>{a68469e8-c7af-483e-bd92-285661a049e8}</Project>
+      <Name>VeeTileEngine2012</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
