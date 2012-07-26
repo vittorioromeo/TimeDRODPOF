@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92F9F803-D0CC-4DD4-B41C-66D51651131F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimeDRODPOF</RootNamespace>
+    <AssemblyName>TimeDRODPOF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TimeDRODPOF.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sfmlnet-audio-2">
+      <HintPath>..\..\..\..\..\May\LaurentGomila-SFML.Net-85a5369\lib\x86\sfmlnet-audio-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-graphics-2">
+      <HintPath>..\..\..\..\..\May\LaurentGomila-SFML.Net-85a5369\lib\x86\sfmlnet-graphics-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-window-2">
+      <HintPath>..\..\..\..\..\May\LaurentGomila-SFML.Net-85a5369\lib\x86\sfmlnet-window-2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Tao.FreeGlut, Version=2.4.0.2, Culture=neutral, PublicKeyToken=6e602a6ad6c0d06d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\backup\a\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.FreeGlut.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\backup\a\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Debug\Tao.OpenGl.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl.Glu">
+      <HintPath>..\..\..\..\backup\a\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.OpenGl.Glu.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TDCommon.cs" />
+    <Compile Include="TDComponents\TDCArrow.cs" />
+    <Compile Include="TDComponents\TDCBooster.cs" />
+    <Compile Include="TDComponents\TDCDiagonalSquare.cs" />
+    <Compile Include="TDComponents\TDCDoor.cs" />
+    <Compile Include="TDComponents\TDCEgg.cs" />
+    <Compile Include="TDComponents\TDCFloodFiller.cs" />
+    <Compile Include="TDComponents\TDCDirection.cs" />
+    <Compile Include="TDComponents\TDCHotTile.cs" />
+    <Compile Include="TDComponents\TDCID.cs" />
+    <Compile Include="TDComponents\TDCOrb.cs" />
+    <Compile Include="TDComponents\TDCOremites.cs" />
+    <Compile Include="TDComponents\TDCOrthogonalSquare.cs" />
+    <Compile Include="TDComponents\TDCPathmapper.cs" />
+    <Compile Include="TDComponents\TDCPlayer.cs" />
+    <Compile Include="TDComponents\TDCRoachQueen.cs" />
+    <Compile Include="TDComponents\TDCRoomSwitch.cs" />
+    <Compile Include="TDComponents\TDCScroll.cs" />
+    <Compile Include="TDComponents\TDCTarget.cs" />
+    <Compile Include="TDComponents\TDCHitByWeapon.cs" />
+    <Compile Include="TDComponents\TDCIDCaller.cs" />
+    <Compile Include="TDComponents\TDCMovement.cs" />
+    <Compile Include="TDComponents\TDCMovementTargetAI.cs" />
+    <Compile Include="TDComponents\TDCSwitch.cs" />
+    <Compile Include="TDComponents\TDCIDSwitchAI.cs" />
+    <Compile Include="TDComponents\TDCSwitchRecalculateTagAI.cs" />
+    <Compile Include="TDComponents\TDCPressurePlate.cs" />
+    <Compile Include="TDComponents\TDCRecalculateSprites.cs" />
+    <Compile Include="TDComponents\TDCSpecialSquare.cs" />
+    <Compile Include="TDComponents\TDCTrapdoor.cs" />
+    <Compile Include="TDComponents\TDCTunnel.cs" />
+    <Compile Include="TDComponents\TDCWeaponSlot.cs" />
+    <Compile Include="TDComponents\TDCWielderRenderAI.cs" />
+    <Compile Include="TDComponents\TDCWielderTargetAI.cs" />
+    <Compile Include="TDEditor\TDEEditor.cs" />
+    <Compile Include="TDEditor\TDEEntity.cs" />
+    <Compile Include="TDEditor\TDEOutline.cs" />
+    <Compile Include="TDEditor\TDEEntityParameter.cs" />
+    <Compile Include="TDEditor\TDEOutlines.cs" />
+    <Compile Include="TDEditor\TDETile.cs" />
+    <Compile Include="TDEditor\TDETileManager.cs" />
+    <Compile Include="TDEditor\TDELevelIO.cs" />
+    <Compile Include="TDEditor\TDEUtils.cs" />
+    <Compile Include="TDGame\TDGGame.cs" />
+    <Compile Include="TDComponents\TDCRender.cs" />
+    <Compile Include="TDComponents\TDCWielder.cs" />
+    <Compile Include="TDComponents\TDCWeapon.cs" />
+    <Compile Include="TDGame\TDGInstance.cs" />
+    <Compile Include="TDLib\ByDistance.cs" />
+    <Compile Include="TDLib\TDLComponentFactory.cs" />
+    <Compile Include="TDLib\TDLDistances.cs" />
+    <Compile Include="TDLib\TDLLayers.cs" />
+    <Compile Include="TDLib\TDLOrders.cs" />
+    <Compile Include="TDLib\TDLPathmaps.cs" />
+    <Compile Include="TDLib\TDLPriorities.cs" />
+    <Compile Include="TDLib\TDLRecalculations.cs" />
+    <Compile Include="TDLib\TDLTurnActions.cs" />
+    <Compile Include="TDUtils.cs" />
+    <Compile Include="TDPathfinding\TDPNode.cs" />
+    <Compile Include="TDPathfinding\TDPPathfinder.cs" />
+    <Compile Include="TDPathfinding\TDPPathmap.cs" />
+    <Compile Include="TDGame\TDGUndoValues.cs" />
+    <Compile Include="TDGUI.cs" />
+    <Compile Include="TDStructure\TDSHold.cs" />
+    <Compile Include="TDStructure\TDSLevel.cs" />
+    <Compile Include="TDStructure\TDSRoom.cs" />
+    <Compile Include="TDStructure\TDSControl.cs" />
+    <Compile Include="TDLib\EditorOutlineAttribute.cs" />
+    <Compile Include="TDComponents\TDCKiller.cs" />
+    <Compile Include="TDComponents\TDCRenderDirectionAI.cs" />
+    <Compile Include="TDLib\TDLTags.cs" />
+    <Compile Include="TDLib\TDLFactory.cs" />
+    <Compile Include="TDLib\TDLSounds.cs" />
+    <Compile Include="TDLib\TDLMethods.cs" />
+    <Compile Include="TDVector2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SFMLStart\SFMLStart\SFMLStart.csproj">
+      <Project>{c8df8299-2b2e-415b-849e-4cbbc1cb4aa6}</Project>
+      <Name>SFMLStart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VeeTileEngine2012\VeeTileEngine2012.csproj">
+      <Project>{a68469e8-c7af-483e-bd92-285661a049e8}</Project>
+      <Name>VeeTileEngine2012</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="csfml-audio-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-graphics-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-window-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libsndfile-1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="openal32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
