@@ -68,6 +68,9 @@ namespace TimeDRODPOF.TDEditor
         public static TDEOutline GetOutlineByUID(int mUID) { return Outlines.Find(x => x.UID == mUID); }
 
         private static void Create(int mUID, string mName,
-                                   int mLayer, string mTextureName, int mEditorGroup, string mTilesetName = null, string mLabelName = null) { Outlines.Add(new TDEOutline(mUID, mEditorGroup, mName, mLayer, mTextureName, mTilesetName, mLabelName)); }
+                                   int mLayer, string mTextureName, int mEditorGroup, string mTilesetName = null, string mLabelName = null)
+        {
+            Outlines.Add(new TDEOutline(mUID, mEditorGroup, mName, mLayer, mTextureName, mTilesetName, mLabelName));
+        }
     }
 }

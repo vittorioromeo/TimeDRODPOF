@@ -70,60 +70,60 @@ namespace TimeDRODPOF.TDEditor
             const float zoominspeed = 1.05f;
             const float zoomoutspeed = 0.95f;
 
-            DefineInput("createnewhold", 50, CreateNewHold, null, new InputCombination(Keyboard.Key.F1));
-            DefineInput("createnewlevel", 50, CreateNewLevel, null, new InputCombination(Keyboard.Key.F2));
-            DefineInput("createnewroom", 50, () => CreateNewRoom(false), null, new InputCombination(Keyboard.Key.F3));
-            DefineInput("selectlevel", 50, SelectLevel, null, new InputCombination(Keyboard.Key.F4));
-            DefineInput("selectroom", 50, SelectRoom, null, new InputCombination(Keyboard.Key.F5));
+            Bind("createnewhold", 50, CreateNewHold, null, new KeyCombination(Keyboard.Key.F1));
+            Bind("createnewlevel", 50, CreateNewLevel, null, new KeyCombination(Keyboard.Key.F2));
+            Bind("createnewroom", 50, () => CreateNewRoom(false), null, new KeyCombination(Keyboard.Key.F3));
+            Bind("selectlevel", 50, SelectLevel, null, new KeyCombination(Keyboard.Key.F4));
+            Bind("selectroom", 50, SelectRoom, null, new KeyCombination(Keyboard.Key.F5));
 
-            DefineInput("pan_n", 0, () => GameWindow.Camera.Move(new Vector2f(0, -panspeed)), null, new InputCombination(Keyboard.Key.I));
-            DefineInput("pan_s", 0, () => GameWindow.Camera.Move(new Vector2f(0, panspeed)), null, new InputCombination(Keyboard.Key.K));
-            DefineInput("pan_e", 0, () => GameWindow.Camera.Move(new Vector2f(panspeed, 0)), null, new InputCombination(Keyboard.Key.L));
-            DefineInput("pan_w", 0, () => GameWindow.Camera.Move(new Vector2f(-panspeed, 0)), null, new InputCombination(Keyboard.Key.J));
+            Bind("pan_n", 0, () => GameWindow.Camera.Move(new Vector2f(0, -panspeed)), null, new KeyCombination(Keyboard.Key.I));
+            Bind("pan_s", 0, () => GameWindow.Camera.Move(new Vector2f(0, panspeed)), null, new KeyCombination(Keyboard.Key.K));
+            Bind("pan_e", 0, () => GameWindow.Camera.Move(new Vector2f(panspeed, 0)), null, new KeyCombination(Keyboard.Key.L));
+            Bind("pan_w", 0, () => GameWindow.Camera.Move(new Vector2f(-panspeed, 0)), null, new KeyCombination(Keyboard.Key.J));
 
-            DefineInput("zoom_in", 0, () => GameWindow.Camera.Zoom(zoominspeed), null, new InputCombination(Keyboard.Key.N));
-            DefineInput("zoom_out", 0, () => GameWindow.Camera.Zoom(zoomoutspeed), null, new InputCombination(Keyboard.Key.M));
+            Bind("zoom_in", 0, () => GameWindow.Camera.Zoom(zoominspeed), null, new KeyCombination(Keyboard.Key.N));
+            Bind("zoom_out", 0, () => GameWindow.Camera.Zoom(zoomoutspeed), null, new KeyCombination(Keyboard.Key.M));
 
-            DefineInput("reset", 0, () =>
+            Bind("reset", 0, () =>
                                     {
                                         if (_currentTileManager == null) return;
                                         _drawEntities.Clear();
                                         _currentTileManager.Clear(33, 24);
                                         _common.RefreshTexture(TDUtils.TileSize*_currentTileManager.Width, TDUtils.TileSize*_currentTileManager.Height);
-                                    }, null, new InputCombination(Keyboard.Key.R));
-            DefineInput("exit", 0, () => Environment.Exit(0), null, new InputCombination(Keyboard.Key.Escape));
+                                    }, null, new KeyCombination(Keyboard.Key.R));
+            Bind("exit", 0, () => Environment.Exit(0), null, new KeyCombination(Keyboard.Key.Escape));
 
-            DefineInput("switchtogame", 0, () => GameWindow.SetGame(Game), null, new InputCombination(Keyboard.Key.F6));
+            Bind("switchtogame", 0, () => GameWindow.SetGame(Game), null, new KeyCombination(Keyboard.Key.F6));
 
-            DefineInput("paint", 0, Paint, StopPainting, new InputCombination(Mouse.Button.Left));
-            DefineInput("paintnochecks", 0, PaintNoChecks, null, new InputCombination(Keyboard.Key.LControl, Mouse.Button.Left));
-            DefineInput("delete", 0, Delete, StopDeleting, new InputCombination(Mouse.Button.Right));
-            DefineInput("deleteall", 0, DeleteAll, null, new InputCombination(Keyboard.Key.LControl, Mouse.Button.Right));
-            DefineInput("pick", 20, Pick, null, new InputCombination(Keyboard.Key.Q));
-            DefineInput("rotatecw", 15, () => RotateEntity(1), null, new InputCombination(Keyboard.Key.H));
-            DefineInput("rotateccw", 15, () => RotateEntity(-1), null, new InputCombination(Keyboard.Key.G));
+            Bind("paint", 0, Paint, StopPainting, new KeyCombination(Mouse.Button.Left));
+            Bind("paintnochecks", 0, PaintNoChecks, null, new KeyCombination(Keyboard.Key.LControl, Mouse.Button.Left));
+            Bind("delete", 0, Delete, StopDeleting, new KeyCombination(Mouse.Button.Right));
+            Bind("deleteall", 0, DeleteAll, null, new KeyCombination(Keyboard.Key.LControl, Mouse.Button.Right));
+            Bind("pick", 20, Pick, null, new KeyCombination(Keyboard.Key.Q));
+            Bind("rotatecw", 15, () => RotateEntity(1), null, new KeyCombination(Keyboard.Key.H));
+            Bind("rotateccw", 15, () => RotateEntity(-1), null, new KeyCombination(Keyboard.Key.G));
 
-            DefineInput("browseparameters", 50, BrowseParameters, null, new InputCombination(Mouse.Button.Middle));
-            DefineInput("copyparameters", 5, CopyParameters, null, new InputCombination(Keyboard.Key.C));
-            DefineInput("pasteparameters", 0, PasteParameters, null, new InputCombination(Keyboard.Key.V));
+            Bind("browseparameters", 50, BrowseParameters, null, new KeyCombination(Mouse.Button.Middle));
+            Bind("copyparameters", 5, CopyParameters, null, new KeyCombination(Keyboard.Key.C));
+            Bind("pasteparameters", 0, PasteParameters, null, new KeyCombination(Keyboard.Key.V));
 
-            DefineInput("copyentity", 5, CopyEntity, null, new InputCombination(Keyboard.Key.LControl, Keyboard.Key.C));
-            DefineInput("pasteentity", 0, PasteEntity, null, new InputCombination(Keyboard.Key.LControl, Keyboard.Key.V));
+            Bind("copyentity", 5, CopyEntity, null, new KeyCombination(Keyboard.Key.LControl, Keyboard.Key.C));
+            Bind("pasteentity", 0, PasteEntity, null, new KeyCombination(Keyboard.Key.LControl, Keyboard.Key.V));
 
-            DefineInput("outlinesprevious", 20, PreviousOutline, null, new InputCombination(Keyboard.Key.A));
-            DefineInput("outlinesnext", 20, NextOutline, null, new InputCombination(Keyboard.Key.S));
+            Bind("outlinesprevious", 20, PreviousOutline, null, new KeyCombination(Keyboard.Key.A));
+            Bind("outlinesnext", 20, NextOutline, null, new KeyCombination(Keyboard.Key.S));
 
-            DefineInput("savetofile", 50, SaveToFile, null, new InputCombination(Keyboard.Key.Comma));
-            DefineInput("loadfromfile", 50, LoadFromFile, null, new InputCombination(Keyboard.Key.Period));
+            Bind("savetofile", 50, SaveToFile, null, new KeyCombination(Keyboard.Key.Comma));
+            Bind("loadfromfile", 50, LoadFromFile, null, new KeyCombination(Keyboard.Key.Period));
 
-            DefineInput("toggledrawtexts", 20, () => _drawIDs = !_drawIDs, null, new InputCombination(Keyboard.Key.T));
+            Bind("toggledrawtexts", 20, () => _drawIDs = !_drawIDs, null, new KeyCombination(Keyboard.Key.T));
 
-            DefineInput("switchroom_n", 20, () => SwitchRoom(0, -1), null, new InputCombination(Keyboard.Key.Numpad8));
-            DefineInput("switchroom_s", 20, () => SwitchRoom(0, 1), null, new InputCombination(Keyboard.Key.Numpad2));
-            DefineInput("switchroom_w", 20, () => SwitchRoom(-1, 0), null, new InputCombination(Keyboard.Key.Numpad4));
-            DefineInput("switchroom_e", 20, () => SwitchRoom(1, 0), null, new InputCombination(Keyboard.Key.Numpad6));
+            Bind("switchroom_n", 20, () => SwitchRoom(0, -1), null, new KeyCombination(Keyboard.Key.Numpad8));
+            Bind("switchroom_s", 20, () => SwitchRoom(0, 1), null, new KeyCombination(Keyboard.Key.Numpad2));
+            Bind("switchroom_w", 20, () => SwitchRoom(-1, 0), null, new KeyCombination(Keyboard.Key.Numpad4));
+            Bind("switchroom_e", 20, () => SwitchRoom(1, 0), null, new KeyCombination(Keyboard.Key.Numpad6));
 
-            DefineInput("switchpaintingmode", 20, () => _rectangleMode = !_rectangleMode, null, new InputCombination(Keyboard.Key.D));
+            Bind("switchpaintingmode", 20, () => _rectangleMode = !_rectangleMode, null, new KeyCombination(Keyboard.Key.D));
         }
 
         private void RefreshTileManager()

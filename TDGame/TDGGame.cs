@@ -49,44 +49,44 @@ namespace TimeDRODPOF.TDGame
             const float zoominspeed = 1.05f;
             const float zoomoutspeed = 0.95f;
 
-            DefineInput("n", delay, () => NextTurn(0), null, new InputCombination(Keyboard.Key.W));
-            DefineInput("ne", delay, () => NextTurn(1), null, new InputCombination(Keyboard.Key.E));
-            DefineInput("e", delay, () => NextTurn(2), null, new InputCombination(Keyboard.Key.D));
-            DefineInput("se", delay, () => NextTurn(3), null, new InputCombination(Keyboard.Key.C));
-            DefineInput("s", delay, () => NextTurn(4), null, new InputCombination(Keyboard.Key.S));
-            DefineInput("sw", delay, () => NextTurn(5), null, new InputCombination(Keyboard.Key.Z));
-            DefineInput("w", delay, () => NextTurn(6), null, new InputCombination(Keyboard.Key.A));
-            DefineInput("nw", delay, () => NextTurn(7), null, new InputCombination(Keyboard.Key.Q));
-            DefineInput("swingcw", delay + 4, () => NextTurn(8), null, new InputCombination(Keyboard.Key.Left));
-            DefineInput("swingccw", delay + 4, () => NextTurn(9), null, new InputCombination(Keyboard.Key.Right));
-            DefineInput("wait", delay, () => NextTurn(-1), null, new InputCombination(Keyboard.Key.LShift));
+            Bind("n", delay, () => NextTurn(0), null, new KeyCombination(Keyboard.Key.W));
+            Bind("ne", delay, () => NextTurn(1), null, new KeyCombination(Keyboard.Key.E));
+            Bind("e", delay, () => NextTurn(2), null, new KeyCombination(Keyboard.Key.D));
+            Bind("se", delay, () => NextTurn(3), null, new KeyCombination(Keyboard.Key.C));
+            Bind("s", delay, () => NextTurn(4), null, new KeyCombination(Keyboard.Key.S));
+            Bind("sw", delay, () => NextTurn(5), null, new KeyCombination(Keyboard.Key.Z));
+            Bind("w", delay, () => NextTurn(6), null, new KeyCombination(Keyboard.Key.A));
+            Bind("nw", delay, () => NextTurn(7), null, new KeyCombination(Keyboard.Key.Q));
+            Bind("swingcw", delay + 4, () => NextTurn(8), null, new KeyCombination(Keyboard.Key.Left));
+            Bind("swingccw", delay + 4, () => NextTurn(9), null, new KeyCombination(Keyboard.Key.Right));
+            Bind("wait", delay, () => NextTurn(-1), null, new KeyCombination(Keyboard.Key.LShift));
 
-            DefineInput("debugbattlekey", 0, () =>
+            Bind("debugbattlekey", 0, () =>
                                              {
                                                  var move = _battleFirstMove;
                                                  if (_isLastBattleInputTwo) move = _battleSecondMove;
                                                  NextTurn(move);
-                                             }, null, new InputCombination(Keyboard.Key.LControl));
+                                             }, null, new KeyCombination(Keyboard.Key.LControl));
 
-            DefineInput("debugundokey", 15, Undo, null, new InputCombination(Keyboard.Key.Back));
+            Bind("debugundokey", 15, Undo, null, new KeyCombination(Keyboard.Key.Back));
 
-            DefineInput("pan_n", 0, () => GameWindow.Camera.Move(new Vector2f(0, -panspeed)), null, new InputCombination(Keyboard.Key.I));
-            DefineInput("pan_s", 0, () => GameWindow.Camera.Move(new Vector2f(0, panspeed)), null, new InputCombination(Keyboard.Key.K));
-            DefineInput("pan_e", 0, () => GameWindow.Camera.Move(new Vector2f(panspeed, 0)), null, new InputCombination(Keyboard.Key.L));
-            DefineInput("pan_w", 0, () => GameWindow.Camera.Move(new Vector2f(-panspeed, 0)), null, new InputCombination(Keyboard.Key.J));
+            Bind("pan_n", 0, () => GameWindow.Camera.Move(new Vector2f(0, -panspeed)), null, new KeyCombination(Keyboard.Key.I));
+            Bind("pan_s", 0, () => GameWindow.Camera.Move(new Vector2f(0, panspeed)), null, new KeyCombination(Keyboard.Key.K));
+            Bind("pan_e", 0, () => GameWindow.Camera.Move(new Vector2f(panspeed, 0)), null, new KeyCombination(Keyboard.Key.L));
+            Bind("pan_w", 0, () => GameWindow.Camera.Move(new Vector2f(-panspeed, 0)), null, new KeyCombination(Keyboard.Key.J));
 
-            DefineInput("zoom_in", 0, () => GameWindow.Camera.Zoom(zoominspeed), null, new InputCombination(Keyboard.Key.N));
-            DefineInput("zoom_out", 0, () => GameWindow.Camera.Zoom(zoomoutspeed), null, new InputCombination(Keyboard.Key.M));
+            Bind("zoom_in", 0, () => GameWindow.Camera.Zoom(zoominspeed), null, new KeyCombination(Keyboard.Key.N));
+            Bind("zoom_out", 0, () => GameWindow.Camera.Zoom(zoomoutspeed), null, new KeyCombination(Keyboard.Key.M));
 
-            DefineInput("reset", 20, () =>
+            Bind("reset", 20, () =>
                                      {
                                          _undoValues.Inputs.Clear();
                                          Reset();
                                      }
-                        , null, new InputCombination(Keyboard.Key.R));
-            DefineInput("exit", 0, () => Environment.Exit(0), null, new InputCombination(Keyboard.Key.Escape));
-            DefineInput("switchtoeditor", 0, () => GameWindow.SetGame(Editor), null, new InputCombination(Keyboard.Key.F5));
-            DefineInput("loadfromfiledebug", 60, LoadFromFile, null, new InputCombination(Keyboard.Key.Period));
+                        , null, new KeyCombination(Keyboard.Key.R));
+            Bind("exit", 0, () => Environment.Exit(0), null, new KeyCombination(Keyboard.Key.Escape));
+            Bind("switchtoeditor", 0, () => GameWindow.SetGame(Editor), null, new KeyCombination(Keyboard.Key.F5));
+            Bind("loadfromfiledebug", 60, LoadFromFile, null, new KeyCombination(Keyboard.Key.Period));
         }
 
         private void LoadFromFile()
