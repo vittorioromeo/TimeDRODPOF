@@ -85,12 +85,12 @@ namespace TimeDRODPOF.TDEditor
             Bind("zoom_out", 0, () => GameWindow.Camera.Zoom(zoomoutspeed), null, new KeyCombination(Keyboard.Key.M));
 
             Bind("reset", 0, () =>
-                                    {
-                                        if (_currentTileManager == null) return;
-                                        _drawEntities.Clear();
-                                        _currentTileManager.Clear(33, 24);
-                                        _common.RefreshTexture(TDUtils.TileSize*_currentTileManager.Width, TDUtils.TileSize*_currentTileManager.Height);
-                                    }, null, new KeyCombination(Keyboard.Key.R));
+                             {
+                                 if (_currentTileManager == null) return;
+                                 _drawEntities.Clear();
+                                 _currentTileManager.Clear(33, 24);
+                                 _common.RefreshTexture(TDUtils.TileSize*_currentTileManager.Width, TDUtils.TileSize*_currentTileManager.Height);
+                             }, null, new KeyCombination(Keyboard.Key.R));
             Bind("exit", 0, () => Environment.Exit(0), null, new KeyCombination(Keyboard.Key.Escape));
 
             Bind("switchtogame", 0, () => GameWindow.SetGame(Game), null, new KeyCombination(Keyboard.Key.F6));

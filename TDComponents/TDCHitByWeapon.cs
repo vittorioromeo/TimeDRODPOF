@@ -10,10 +10,15 @@ namespace TimeDRODPOF.TDComponents
     [Serializable]
     public class TDCHitByWeapon : Component
     {
+        #region HitActions enum
         public enum HitActions
         {
-            Break, KillBrain, Kill, BreakIfOff
+            Break,
+            KillBrain,
+            Kill,
+            BreakIfOff
         }
+        #endregion
 
         public TDCHitByWeapon(Action<TDCWeapon> mHitAction) { HitAction = mHitAction; }
         public TDCHitByWeapon(HitActions mHitAction)

@@ -23,9 +23,9 @@ namespace TimeDRODPOF.TDComponents
 
         private readonly TDCFloodFiller _floodFillerComponent;
         private readonly TDCIDCaller _idCallerComponent;
+        private readonly PressurePlateType _pressurePlateType;
         private readonly TDCRender _renderComponent;
         private readonly TDCSpecialSquare _specialSquareComponent;
-        private readonly PressurePlateType _pressurePlateType;
         private readonly string _triggeredLabel, _unTriggeredLabel;
 
         public TDCPressurePlate(PressurePlateType mPressurePlateType, TDCRender mRenderComponent, TDCFloodFiller mFloodFillerComponent,

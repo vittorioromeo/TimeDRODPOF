@@ -8,8 +8,8 @@ namespace TimeDRODPOF.TDComponents
     [Serializable]
     public class TDCPlayer : Component
     {
-        [NonSerialized] private readonly TDGGame _game;
         private readonly TDCDirection _directionComponent;
+        [NonSerialized] private readonly TDGGame _game;
         private readonly TDCMovement _movementComponent;
         private readonly TDCWielder _wielderComponent;
 

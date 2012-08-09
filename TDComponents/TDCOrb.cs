@@ -8,9 +8,9 @@ namespace TimeDRODPOF.TDComponents
     [Serializable]
     public class TDCOrb : Component
     {
-        private readonly TDCRender _renderComponent;
         private readonly TDCIDCaller _idCallerComponent;
         private readonly bool _isBroken;
+        private readonly TDCRender _renderComponent;
         private int _health;
         private int _struckTime;
 

@@ -12,8 +12,8 @@ namespace TimeDRODPOF.TDComponents
     [Serializable]
     public class TDCMovementTargetAI : Component
     {
-        [NonSerialized] private readonly TDGInstance _instance;
         private readonly TDCDirection _directionComponent;
+        [NonSerialized] private readonly TDGInstance _instance;
         private readonly TDCMovement _movementComponent;
         private readonly TDCTarget _targetComponent;
 

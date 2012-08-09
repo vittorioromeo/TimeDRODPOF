@@ -62,11 +62,11 @@ namespace TimeDRODPOF.TDGame
             Bind("wait", delay, () => NextTurn(-1), null, new KeyCombination(Keyboard.Key.LShift));
 
             Bind("debugbattlekey", 0, () =>
-                                             {
-                                                 var move = _battleFirstMove;
-                                                 if (_isLastBattleInputTwo) move = _battleSecondMove;
-                                                 NextTurn(move);
-                                             }, null, new KeyCombination(Keyboard.Key.LControl));
+                                      {
+                                          var move = _battleFirstMove;
+                                          if (_isLastBattleInputTwo) move = _battleSecondMove;
+                                          NextTurn(move);
+                                      }, null, new KeyCombination(Keyboard.Key.LControl));
 
             Bind("debugundokey", 15, Undo, null, new KeyCombination(Keyboard.Key.Back));
 
@@ -79,11 +79,11 @@ namespace TimeDRODPOF.TDGame
             Bind("zoom_out", 0, () => GameWindow.Camera.Zoom(zoomoutspeed), null, new KeyCombination(Keyboard.Key.M));
 
             Bind("reset", 20, () =>
-                                     {
-                                         _undoValues.Inputs.Clear();
-                                         Reset();
-                                     }
-                        , null, new KeyCombination(Keyboard.Key.R));
+                              {
+                                  _undoValues.Inputs.Clear();
+                                  Reset();
+                              }
+                 , null, new KeyCombination(Keyboard.Key.R));
             Bind("exit", 0, () => Environment.Exit(0), null, new KeyCombination(Keyboard.Key.Escape));
             Bind("switchtoeditor", 0, () => GameWindow.SetGame(Editor), null, new KeyCombination(Keyboard.Key.F5));
             Bind("loadfromfiledebug", 60, LoadFromFile, null, new KeyCombination(Keyboard.Key.Period));
