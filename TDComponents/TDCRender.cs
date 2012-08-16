@@ -5,6 +5,7 @@ using SFML.Graphics;
 using SFML.Window;
 using SFMLStart.Data;
 using SFMLStart.Utilities;
+using SFMLStart.Vectors;
 using VeeTileEngine2012;
 using Utils = SFMLStart.Utilities.Utils;
 
@@ -100,11 +101,12 @@ namespace TimeDRODPOF.TDComponents
 
             foreach (var sprite in _sprites)
             {
-                if (_needsToPosition) sprite.Position = GetDrawPosition(new Vector2f(X, Y));
+                if (_needsToPosition) sprite.Position = GetDrawPosition(new SSVector2F(X, Y));
+                
 
-                var targetPosition = GetDrawPosition(new Vector2f(Entity.X, Entity.Y));
+                var targetPosition = GetDrawPosition(new SSVector2F(Entity.X, Entity.Y));
                 var position = targetPosition;
-                if (IsLerped) position = Utils.Math.Vectors.Lerp(sprite.Position, targetPosition, LerpSpeed);
+                if (IsLerped) position = Utils.Math.ToDeprecate.Lerp(sprite.Position, targetPosition, LerpSpeed);
                 sprite.Position = position;
                 mRenderTarget.Draw(sprite);
             }
@@ -112,6 +114,9 @@ namespace TimeDRODPOF.TDComponents
             if (_needsToPosition) _needsToPosition = false;
         }
 
-        private static Vector2f GetDrawPosition(Vector2f mPosition) { return new Vector2f(mPosition.X*TDUtils.TileSize + TDUtils.TileSize/2f, mPosition.Y*TDUtils.TileSize + TDUtils.TileSize/2f); }
+        private static Vector2f GetDrawPosition(SSVector2F mPosition)
+        {
+            return new Vector2f(mPosition.X * TDUtils.TileSize + TDUtils.TileSize / 2f, mPosition.Y * TDUtils.TileSize + TDUtils.TileSize / 2f);
+        }
     }
 }
