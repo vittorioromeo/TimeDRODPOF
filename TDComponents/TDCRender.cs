@@ -106,7 +106,7 @@ namespace TimeDRODPOF.TDComponents
 
                 var targetPosition = GetDrawPosition(new SSVector2F(Entity.X, Entity.Y));
                 var position = targetPosition;
-                if (IsLerped) position = Utils.Math.ToDeprecate.Lerp(sprite.Position, targetPosition, LerpSpeed);
+                if (IsLerped) position = Lerp(sprite.Position, targetPosition, LerpSpeed);
                 sprite.Position = position;
                 mRenderTarget.Draw(sprite);
             }
@@ -117,6 +117,12 @@ namespace TimeDRODPOF.TDComponents
         private static Vector2f GetDrawPosition(SSVector2F mPosition)
         {
             return new Vector2f(mPosition.X * TDUtils.TileSize + TDUtils.TileSize / 2f, mPosition.Y * TDUtils.TileSize + TDUtils.TileSize / 2f);
+        }
+
+        private static Vector2f Lerp(Vector2f mVector1, Vector2f mVector2, float mValue)
+        {
+            return new Vector2f(mVector1.X + (mVector2.X - mVector1.X) * mValue,
+                                mVector1.Y + (mVector2.Y - mVector1.Y) * mValue);
         }
     }
 }
