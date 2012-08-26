@@ -33,7 +33,7 @@ namespace TimeDRODPOF.TDGame
 
             OnUpdate += mFrameTime => _common.UpdatePositions();
             OnDrawBeforeCamera += _common.GUI.DrawBackground;
-            OnDrawAfterCamera += DrawEntities;
+            AddDrawAction(DrawEntities);
             OnDrawAfterDefault += DrawGUI;
             InitializeInputs();
         }

@@ -48,7 +48,7 @@ namespace TimeDRODPOF.TDEditor
                             UpdateSelector();
                             UpdateInfoText();
                         };
-            OnDrawAfterCamera += DrawEntities;
+            AddDrawAction(DrawEntities);
 
             _previewSpriteCount = 14;
             for (var i = 0; i < _previewSpriteCount; i++) _elementSprites.Add(new Sprite());
