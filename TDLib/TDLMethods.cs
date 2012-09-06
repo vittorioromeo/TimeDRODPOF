@@ -19,8 +19,8 @@ namespace TimeDRODPOF.TDLib
 
         public static void AttachBrokenOverlay(TDCRender mRenderComponent)
         {
-            mRenderComponent.AddSprite(Assets.Tilesets["brokenoverlaytiles"].GetSprite(Utils.RandomGenerator.GetNextInt(0, 3),
-                                                                                       Utils.RandomGenerator.GetNextInt(0, 3),
+            mRenderComponent.AddSprite(Assets.Tilesets["brokenoverlaytiles"].GetSprite(Utils.Random.Next(0, 3),
+                                                                                       Utils.Random.Next(0, 3),
                                                                                        Assets.GetTexture(@"environment\brokenoverlay")));
         }
 
