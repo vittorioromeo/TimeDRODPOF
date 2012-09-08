@@ -53,7 +53,7 @@ namespace TimeDRODPOF.TDComponents
                 _renderComponent.GetSprite(1).Scale = new Vector2f(0, 0);
                 return;
             }
-            _renderComponent.SetSprite(1, Assets.Tilesets["dirtiles"].GetSprite("n", Weapon.GetComponent<TDCRender>().GetSprite(0).Texture));
+            _renderComponent.SetSprite(1, Assets.GetTileset("dirtiles").GetSprite("n", Weapon.GetComponent<TDCRender>().GetSprite(0).Texture));
             _renderComponent.GetSprite(1).Origin += new Vector2f(0, 2);
             _renderComponent.GetSprite(1).Rotation = 45;
             _renderComponent.GetSprite(1).Scale = new Vector2f(0.6f, 0.6f);

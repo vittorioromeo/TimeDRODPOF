@@ -22,7 +22,7 @@ namespace TimeDRODPOF.TDComponents
             Prefix = mPrefix;
             Suffix = mSuffix;
 
-            _renderComponent.OnDraw += () => _renderComponent.GetSprites().ForEach(x => x.TextureRect = Assets.Tilesets[TilesetName].GetTextureRect(Prefix + _directionComponent.DirectionString + Suffix));
+            _renderComponent.OnDraw += () => _renderComponent.GetSprites().ForEach(x => x.TextureRect = Assets.GetTileset(TilesetName).GetTextureRect(Prefix + _directionComponent.DirectionString + Suffix));
         }
 
         public string TilesetName { get; set; }

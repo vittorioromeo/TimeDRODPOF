@@ -166,8 +166,8 @@ namespace TimeDRODPOF.TDLib
             var cSpecialSquare = new TDCSpecialSquare(TDLPriorities.Arrow);
             var cID = TDLComponentFactory.ID(mIDs);
             var cSwitch = new TDCSwitch(cRender, mIsOff);
-            cSwitch.SetOffTextureRect(Assets.Tilesets["onoffdirtiles"].GetTextureRect("off_" + cDirection.DirectionString));
-            cSwitch.SetOnTextureRect(Assets.Tilesets["onoffdirtiles"].GetTextureRect("on_" + cDirection.DirectionString));
+            cSwitch.SetOffTextureRect(Assets.GetTileset("onoffdirtiles").GetTextureRect("off_" + cDirection.DirectionString));
+            cSwitch.SetOnTextureRect(Assets.GetTileset("onoffdirtiles").GetTextureRect("on_" + cDirection.DirectionString));
             var cIDSwitchAI = new TDCIDSwitchAI(cSwitch, cID);
             var cArrow = new TDCArrow(cSpecialSquare, cDirection, cSwitch);
 
@@ -446,8 +446,8 @@ namespace TimeDRODPOF.TDLib
             var cSpecialSquare = new TDCSpecialSquare(TDLPriorities.Trapdoor);
             var cID = TDLComponentFactory.ID(mIDs);
             var cSwitch = new TDCSwitch(cRender, mIsOff);
-            cSwitch.SetOffTextureRect(Assets.Tilesets["onoffdirtiles"].GetTextureRect("off_" + cDirection.DirectionString));
-            cSwitch.SetOnTextureRect(Assets.Tilesets["onoffdirtiles"].GetTextureRect("on_" + cDirection.DirectionString));
+            cSwitch.SetOffTextureRect(Assets.GetTileset("onoffdirtiles").GetTextureRect("off_" + cDirection.DirectionString));
+            cSwitch.SetOnTextureRect(Assets.GetTileset("onoffdirtiles").GetTextureRect("on_" + cDirection.DirectionString));
             var cIDSwitchAI = new TDCIDSwitchAI(cSwitch, cID);
             var cBooster = new TDCBooster(cDirection, cSwitch, cSpecialSquare);
 
@@ -475,7 +475,7 @@ namespace TimeDRODPOF.TDLib
         {
             var result = Roach(mDirection);
             result.UpdateOrder = TDLOrders.Stalwart;
-            result.GetComponent<TDCRender>().AddSprite(Assets.Tilesets["roachtiles"].GetSprite("n", Assets.GetTexture(@"humanoid\cape\green")));
+            result.GetComponent<TDCRender>().AddSprite(Assets.GetTileset("roachtiles").GetSprite("n", Assets.GetTexture(@"humanoid\cape\green")));
             result.GetComponent<TDCTarget>().TargetTags = TDLTags.StalwartTargetTags;
             result.GetComponent<TDCKiller>().TargetTags = TDLTags.StalwartTargetTags;
             result.GetComponent<TDCMovementTargetAI>().PathmapName = TDLPathmaps.SideBad;
@@ -488,7 +488,7 @@ namespace TimeDRODPOF.TDLib
         {
             var result = RoachQueen(mDirection, mSpawnTurns);
             result.UpdateOrder = TDLOrders.Stalwart;
-            result.GetComponent<TDCRender>().AddSprite(Assets.Tilesets["roachtiles"].GetSprite("n", Assets.GetTexture(@"humanoid\cape\green")));
+            result.GetComponent<TDCRender>().AddSprite(Assets.GetTileset("roachtiles").GetSprite("n", Assets.GetTexture(@"humanoid\cape\green")));
             result.GetComponent<TDCTarget>().TargetTags = TDLTags.StalwartTargetTags;
             result.GetComponent<TDCMovementTargetAI>().PathmapName = TDLPathmaps.SideBad;
             result.GetComponent<TDCPathmapper>().ChangePathmap(TDLPathmaps.SideGood);

@@ -12,7 +12,7 @@ namespace TimeDRODPOF.TDLib
         public static void Play(string mSoundName)
         {
             if (!SoundsEnabled) return;
-            Assets.Sounds[mSoundName].Play();
+            Assets.GetSound(mSoundName).Play();
         }
     }
 }

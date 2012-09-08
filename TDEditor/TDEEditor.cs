@@ -485,7 +485,7 @@ namespace TimeDRODPOF.TDEditor
             var isBrokenParameter = mEntity.Parameters.Find(x => x.Name == "mIsBroken");
             if (isBrokenParameter == null || (!((bool) isBrokenParameter.Value))) return;
 
-            var brokenOverlay = Assets.Tilesets["brokenoverlaytiles"].GetSprite(1, 1, Assets.GetTexture(@"environment\brokenoverlay"));
+            var brokenOverlay = Assets.GetTileset("brokenoverlaytiles").GetSprite(1, 1, Assets.GetTexture(@"environment\brokenoverlay"));
             brokenOverlay.Position = mSprite.Position;
             _common.GameTexture.Draw(brokenOverlay);
         }
@@ -499,9 +499,9 @@ namespace TimeDRODPOF.TDEditor
             if (mEntity.Name.Contains("Door")) return;
 
             if (directionParameter == null)
-                mSprite.TextureRect = (bool) offParameter.Value ? Assets.Tilesets["onofftiles"].GetTextureRect("off") : Assets.Tilesets["onofftiles"].GetTextureRect("on");
+                mSprite.TextureRect = (bool) offParameter.Value ? Assets.GetTileset("onofftiles").GetTextureRect("off") : Assets.GetTileset("onofftiles").GetTextureRect("on");
             else
-                mSprite.TextureRect = (bool) offParameter.Value ? Assets.Tilesets["onoffdirtiles"].GetTextureRect("off_n") : Assets.Tilesets["onoffdirtiles"].GetTextureRect("on_n");
+                mSprite.TextureRect = (bool) offParameter.Value ? Assets.GetTileset("onoffdirtiles").GetTextureRect("off_n") : Assets.GetTileset("onoffdirtiles").GetTextureRect("on_n");
         }
         private void DrawEntitiesSpecialIDs(Sprite mSprite, TDEEntity mEntity)
         {

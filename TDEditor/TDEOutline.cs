@@ -17,7 +17,7 @@ namespace TimeDRODPOF.TDEditor
             Layer = mLayer;
             Texture = Assets.GetTexture(mTextureName);
             if (mTilesetName == null || mLabelName == null) TextureRect = new IntRect(0, 0, TDUtils.TextureSize, TDUtils.TextureSize);
-            else TextureRect = Assets.Tilesets[mTilesetName].GetTextureRect(mLabelName);
+            else TextureRect = Assets.GetTileset(mTilesetName).GetTextureRect(mLabelName);
             EditorGroup = mEditorGroup;
             ParameterInfos = new List<ParameterInfo>();
             ParameterDefaultValues = new List<object>();

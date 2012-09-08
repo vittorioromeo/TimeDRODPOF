@@ -81,6 +81,6 @@ namespace TimeDRODPOF.TDComponents
             return true;
         }
 
-        private void Draw() { _renderComponent.GetSprite(0).TextureRect = Assets.Tilesets["dirtiles"].GetTextureRect(_directionComponent.DirectionString); }
+        private void Draw() { _renderComponent.GetSprite(0).TextureRect = Assets.GetTileset("dirtiles").GetTextureRect(_directionComponent.DirectionString); }
     }
 }

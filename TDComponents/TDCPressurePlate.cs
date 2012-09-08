@@ -76,7 +76,7 @@ namespace TimeDRODPOF.TDComponents
             return true;
         }
 
-        private void Draw() { _renderComponent.GetSprite(0).TextureRect = Assets.Tilesets["pressureplatetiles"].GetTextureRect(Triggered ? _triggeredLabel : _unTriggeredLabel); }
+        private void Draw() { _renderComponent.GetSprite(0).TextureRect = Assets.GetTileset("pressureplatetiles").GetTextureRect(Triggered ? _triggeredLabel : _unTriggeredLabel); }
 
         public override void NextTurn()
         {

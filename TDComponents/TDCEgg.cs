@@ -22,7 +22,7 @@ namespace TimeDRODPOF.TDComponents
         public int TurnsToHatch { get; private set; }
         public bool Friendly { get; set; }
 
-        private void Draw() { _renderComponent.GetSprite(0).TextureRect = Assets.Tilesets["roachtiles"].GetTextureRect(4 - TurnsToHatch, 0); }
+        private void Draw() { _renderComponent.GetSprite(0).TextureRect = Assets.GetTileset("roachtiles").GetTextureRect(4 - TurnsToHatch, 0); }
 
         public override void NextTurn()
         {

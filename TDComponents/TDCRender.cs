@@ -71,7 +71,7 @@ namespace TimeDRODPOF.TDComponents
             {
                 Sprite sprite;
                 if (outline.TilesetName == null) sprite = new Sprite(Assets.GetTexture(outline.TextureName));
-                else sprite = new Sprite(Assets.Tilesets[outline.TilesetName].GetSprite(outline.LabelName, Assets.GetTexture(outline.TextureName)));
+                else sprite = new Sprite(Assets.GetTileset(outline.TilesetName).GetSprite(outline.LabelName, Assets.GetTexture(outline.TextureName)));
                 AddSprite(sprite);
             }
         }

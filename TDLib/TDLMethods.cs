@@ -19,14 +19,14 @@ namespace TimeDRODPOF.TDLib
 
         public static void AttachBrokenOverlay(TDCRender mRenderComponent)
         {
-            mRenderComponent.AddSprite(Assets.Tilesets["brokenoverlaytiles"].GetSprite(Utils.Random.Next(0, 3),
+            mRenderComponent.AddSprite(Assets.GetTileset("brokenoverlaytiles").GetSprite(Utils.Random.Next(0, 3),
                                                                                        Utils.Random.Next(0, 3),
                                                                                        Assets.GetTexture(@"environment\brokenoverlay")));
         }
 
         public static void AttachCrackedOverlay(TDCRender mRenderComponent, int mX)
         {
-            mRenderComponent.AddSprite(Assets.Tilesets["brokenoverlaytiles"].GetSprite(mX, 0,
+            mRenderComponent.AddSprite(Assets.GetTileset("brokenoverlaytiles").GetSprite(mX, 0,
                                                                                        Assets.GetTexture(@"environment\crackedoverlay")));
         }
 

@@ -28,11 +28,11 @@ namespace TimeDRODPOF.TDComponents
         {
             if (_struckTime > 0)
             {
-                _renderComponent.GetSprite(0).TextureRect = Assets.Tilesets["orbtiles"].GetTextureRect("struck");
+                _renderComponent.GetSprite(0).TextureRect = Assets.GetTileset("orbtiles").GetTextureRect("struck");
                 _struckTime--;
             }
             else
-                _renderComponent.GetSprite(0).TextureRect = Assets.Tilesets["orbtiles"].GetTextureRect("on");
+                _renderComponent.GetSprite(0).TextureRect = Assets.GetTileset("orbtiles").GetTextureRect("on");
         }
 
         public void Struck(TDCWeapon mWeapon)
@@ -42,7 +42,7 @@ namespace TimeDRODPOF.TDComponents
                 TDLSounds.Play("SoundBrokenWall");
                 _health--;
 
-                if (_health < 2) _renderComponent.GetSprite(1).TextureRect = Assets.Tilesets["brokenoverlaytiles"].GetTextureRect(1, 0);
+                if (_health < 2) _renderComponent.GetSprite(1).TextureRect = Assets.GetTileset("brokenoverlaytiles").GetTextureRect(1, 0);
             }
 
             if (_health == 0)

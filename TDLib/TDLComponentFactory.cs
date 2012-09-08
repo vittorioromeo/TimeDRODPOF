@@ -20,8 +20,8 @@ namespace TimeDRODPOF.TDLib
         {
             var result = new TDCSwitch(mRenderComponent, mIsOff);
 
-            result.SetOffTextureRect(Assets.Tilesets[mTilesetName].GetTextureRect(mOffLabel));
-            result.SetOnTextureRect(Assets.Tilesets[mTilesetName].GetTextureRect(mOnLabel));
+            result.SetOffTextureRect(Assets.GetTileset(mTilesetName).GetTextureRect(mOffLabel));
+            result.SetOnTextureRect(Assets.GetTileset(mTilesetName).GetTextureRect(mOnLabel));
 
             return result;
         }

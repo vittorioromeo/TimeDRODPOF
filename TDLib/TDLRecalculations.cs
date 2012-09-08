@@ -26,7 +26,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -35,7 +35,7 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single");
                 return;
             }
 
@@ -48,7 +48,7 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_cross");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_cross");
                 return;
             }
             #endregion
@@ -63,7 +63,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_tofill_n");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_tofill_n");
                 return;
             }
 
@@ -76,7 +76,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_tofill_s");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_tofill_s");
                 return;
             }
 
@@ -89,7 +89,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_tofill_e");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_tofill_e");
                 return;
             }
 
@@ -102,7 +102,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_tofill_w");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_tofill_w");
                 return;
             }
             #endregion
@@ -117,7 +117,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("internal_fill_corner_w_s");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("internal_fill_corner_w_s");
                 return;
             }
 
@@ -130,7 +130,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("internal_fill_corner_e_s");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("internal_fill_corner_e_s");
                 return;
             }
 
@@ -143,7 +143,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("internal_fill_corner_w_n");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("internal_fill_corner_w_n");
                 return;
             }
 
@@ -156,7 +156,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("internal_fill_corner_e_n");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("internal_fill_corner_e_n");
                 return;
             }
             #endregion
@@ -171,7 +171,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("internal_double_sw_ne");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("internal_double_sw_ne");
                 return;
             }
 
@@ -184,7 +184,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("internal_double_se_nw");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("internal_double_se_nw");
                 return;
             }
             #endregion
@@ -199,7 +199,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("x_nw_fill_se");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("x_nw_fill_se");
                 return;
             }
 
@@ -212,7 +212,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("x_se_fill_nw");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("x_se_fill_nw");
                 return;
             }
 
@@ -225,7 +225,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("x_ne_fill_sw");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("x_ne_fill_sw");
                 return;
             }
 
@@ -238,7 +238,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("x_sw_fill_ne");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("x_sw_fill_ne");
                 return;
             }
             #endregion
@@ -247,56 +247,56 @@ namespace TimeDRODPOF.TDLib
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_horiz");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_horiz");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_vert");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_vert");
             #endregion
 
             #region End
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_w");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_w");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_e");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_e");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_n");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_n");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_s");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_s");
             #endregion
 
             #region Single Corner Diagonal
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_corner_se");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_corner_se");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_corner_sw");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_corner_sw");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_corner_ne");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_corner_ne");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_corner_nw");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_corner_nw");
             #endregion
 
             #region Fill Corner Diagonal
@@ -304,25 +304,25 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_se");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_se");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_sw");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_sw");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_ne");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_ne");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_nw");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_nw");
             #endregion
 
             #region Fill Corner Orthogonal
@@ -331,28 +331,28 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_n");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_n");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_s");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_s");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_w");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_w");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_e");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_e");
             #endregion
 
             #region T
@@ -361,28 +361,28 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("t_n");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("t_n");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("t_s");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("t_s");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("t_e");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("t_e");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("t_w");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("t_w");
             #endregion
 
             #region Y
@@ -391,56 +391,56 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("y_w_fill_e_s");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("y_w_fill_e_s");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y + 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y - 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("y_w_fill_e_n");
+                field.HasEntityByTag(x, y - 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("y_w_fill_e_n");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("y_e_fill_w_s");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("y_e_fill_w_s");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("y_s_fill_e_n");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("y_s_fill_e_n");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("y_w_fill_w_n");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("y_w_fill_w_n");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("y_s_fill_w_n");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("y_s_fill_w_n");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("y_n_fill_e_s");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("y_n_fill_e_s");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("y_n_fill_w_s");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("y_n_fill_w_s");
             #endregion
         }
 
@@ -463,7 +463,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -472,7 +472,7 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single");
                 return;
             }
 
@@ -485,7 +485,7 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
             #endregion
@@ -500,7 +500,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -513,7 +513,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -526,7 +526,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -539,7 +539,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
             #endregion
@@ -554,7 +554,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -567,7 +567,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -580,7 +580,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -593,7 +593,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
             #endregion
@@ -608,7 +608,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -621,7 +621,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
             #endregion
@@ -636,7 +636,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -649,7 +649,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -662,7 +662,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
 
@@ -675,7 +675,7 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y + 1, tag, mCondition))
             {
-                sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill");
+                sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill");
                 return;
             }
             #endregion
@@ -684,56 +684,56 @@ namespace TimeDRODPOF.TDLib
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_horiz");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_horiz");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("single_vert");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("single_vert");
             #endregion
 
             #region End
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_w");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_w");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_e");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_e");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_n");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_n");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("end_s");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("end_s");
             #endregion
 
             #region Single Corner Diagonal
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_se");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_se");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_sw");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_sw");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_ne");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_ne");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_nw");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_nw");
             #endregion
 
             #region Fill Corner Diagonal
@@ -741,25 +741,25 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_se");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_se");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_sw");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_sw");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_ne");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_ne");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_nw");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_nw");
             #endregion
 
             #region Fill Corner Orthogonal
@@ -768,28 +768,28 @@ namespace TimeDRODPOF.TDLib
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_n");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_n");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_s");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_s");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_w");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_w");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_e");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_e");
             #endregion
 
             #region T
@@ -798,28 +798,28 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_s");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_s");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_n");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_n");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_w");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_w");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_e");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_e");
             #endregion
 
             #region Y
@@ -828,56 +828,56 @@ namespace TimeDRODPOF.TDLib
                 !field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_n");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_n");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y + 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y - 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_s");
+                field.HasEntityByTag(x, y - 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_s");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 !field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_n");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_n");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_w");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_w");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_s");
+                !field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_s");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_e");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_e");
 
             if (!field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x + 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_w");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_w");
 
             if (field.HasEntityByTag(x - 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x + 1, y, tag, mCondition) &&
                 !field.HasEntityByTag(x - 1, y - 1, tag, mCondition) &&
                 field.HasEntityByTag(x - 1, y + 1, tag, mCondition) &&
                 field.HasEntityByTag(x, y - 1, tag, mCondition) &&
-                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.Tilesets[tilesetName].GetTextureRect("fill_corner_e");
+                field.HasEntityByTag(x, y + 1, tag, mCondition)) sprite.TextureRect = Assets.GetTileset(tilesetName).GetTextureRect("fill_corner_e");
             #endregion
         }
     }
