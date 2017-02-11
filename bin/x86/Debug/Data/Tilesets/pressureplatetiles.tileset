@@ -1,0 +1,6 @@
+31, 31; // Tile width and height
+0; // Tile separation
+
+// Labels (imagine the tile positions)
+single, multiple, onoff;
+triggered_single, triggered_multiple, triggered_onoff;

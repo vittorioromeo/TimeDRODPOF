@@ -1,0 +1,6 @@
+31, 31; // Tile width and height
+0; // Tile separation
+
+// Labels (imagine the tile positions)
+n, ne, e, se, s, sw, w, nw;
+blink_n, blink_ne, blink_e, blink_se, blink_s, blink_sw, blink_w, blink_nw;

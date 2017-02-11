@@ -2,7 +2,7 @@
 using SFML.Graphics;
 using SFML.Window;
 using SFMLStart.Data;
-
+using SFML.System;
 #endregion
 
 namespace TimeDRODPOF
@@ -17,6 +17,7 @@ namespace TimeDRODPOF
         private readonly RenderTarget _renderTarget;
         private readonly RectangleShape _scrollBackground;
         private readonly Text _scrollText;
+		private readonly Font _myFont = new Font("/usr/share/fonts/TTF/LiberationMono-Regular.ttf");
 
         public TDGUI(RenderTarget mRenderTarget)
         {
@@ -24,11 +25,11 @@ namespace TimeDRODPOF
 
             _guiFrameSprite = new Sprite(Assets.GetTexture(@"gui\gameframe3"));
             _guiBackgroundSprite = new Sprite(Assets.GetTexture(@"gui\background"));
-            _scrollText = new Text("", Font.DefaultFont, 14) {Style = Text.Styles.Italic, Position = new Vector2f(45, 45)};
+            _scrollText = new Text("", _myFont, 14) {Style = Text.Styles.Italic, Position = new Vector2f(45, 45)};
             _scrollBackground = new RectangleShape(new Vector2f(400, 400)) {Position = new Vector2f(38, 34), FillColor = new Color(0, 0, 0, 100)};
-            _guiTurnText = new Text("", Font.DefaultFont, 12) {Style = Text.Styles.Bold, Position = new Vector2f(120, 749), Color = Color.White};
-            _guiRoomText = new Text("", Font.DefaultFont, 12) {Style = Text.Styles.Bold, Position = new Vector2f(300, 749), Color = Color.White};
-            _guiHoldText = new Text("", Font.DefaultFont, 12) {Style = Text.Styles.Bold, Position = new Vector2f(500, 749), Color = Color.White};
+            _guiTurnText = new Text("", _myFont, 12) {Style = Text.Styles.Bold, Position = new Vector2f(120, 749), Color = Color.White};
+            _guiRoomText = new Text("", _myFont, 12) {Style = Text.Styles.Bold, Position = new Vector2f(300, 749), Color = Color.White};
+            _guiHoldText = new Text("", _myFont, 12) {Style = Text.Styles.Bold, Position = new Vector2f(500, 749), Color = Color.White};
         }
 
         public int Turn { private get; set; }

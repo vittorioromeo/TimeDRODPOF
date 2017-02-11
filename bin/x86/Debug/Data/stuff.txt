@@ -1,0 +1,8 @@
+* Added weapon types and weapon slot
+
+--- ANALOGIES/DIFFERENCES FROM DROD
+* Arrows, orthogonal squares can be turned on/off
+* Pressure plate order should work correctly (if monster movement is in the right order then a monster will be able to step on a door opened that turn)
+* Roach queens can spawn on arrows and open doors (I think this is more intuitive, I will probably add a special "no-spawn" field)
+* Roach queens spawn eggs even in the tile they just left (I think this is more intuitive)
+* Tunnels only work when an entity moves in their exact direction (I think this is more intuitive)

@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{92F9F803-D0CC-4DD4-B41C-66D51651131F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -37,27 +37,21 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="sfmlnet-audio-2">
-      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\sfmlnet-audio-2.dll</HintPath>
-    </Reference>
-    <Reference Include="sfmlnet-graphics-2">
-      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\sfmlnet-graphics-2.dll</HintPath>
-    </Reference>
-    <Reference Include="sfmlnet-window-2">
-      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\sfmlnet-window-2.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="Tao.FreeGlut">
-      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.FreeGlut.dll</HintPath>
+    <Reference Include="sfmlnet-audio-2">
+      <HintPath>packages\Graphnode.SFML.Net.2.3.1\lib\sfmlnet-audio-2.dll</HintPath>
     </Reference>
-    <Reference Include="Tao.OpenGl">
-      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.OpenGl.dll</HintPath>
+    <Reference Include="sfmlnet-graphics-2">
+      <HintPath>packages\Graphnode.SFML.Net.2.3.1\lib\sfmlnet-graphics-2.dll</HintPath>
     </Reference>
-    <Reference Include="Tao.OpenGl.Glu">
-      <HintPath>..\..\2012\June\drodclone\SFMLNewTests\TimeDRODPOF\TimeDRODPOF\bin\Release\Tao.OpenGl.Glu.dll</HintPath>
+    <Reference Include="sfmlnet-system-2">
+      <HintPath>packages\Graphnode.SFML.Net.2.3.1\lib\sfmlnet-system-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-window-2">
+      <HintPath>packages\Graphnode.SFML.Net.2.3.1\lib\sfmlnet-window-2.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="csfml-audio-2.dll">
@@ -177,4 +172,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Import Project="packages\Graphnode.SFML.Net.2.3.1\build\Graphnode.SFML.Net.targets" Condition="Exists('packages\Graphnode.SFML.Net.2.3.1\build\Graphnode.SFML.Net.targets')" />
 </Project>

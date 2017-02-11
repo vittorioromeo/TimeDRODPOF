@@ -1,0 +1,6 @@
+31, 31; // Tile width and height
+0; // Tile separation
+
+// Labels (imagine the tile positions)
+on_n, on_ne, on_e, on_se, on_s, on_sw, on_w, on_nw;
+off_n, off_ne, off_e, off_se, off_s, off_sw, off_w, off_nw;

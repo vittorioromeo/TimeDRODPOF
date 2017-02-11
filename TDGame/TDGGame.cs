@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using SFML.Window;
+using SFML.System;
 using SFMLStart;
 using SFMLStart.Data;
 using TimeDRODPOF.TDComponents;
@@ -68,7 +69,7 @@ namespace TimeDRODPOF.TDGame
                                           NextTurn(move);
                                       }, null, new KeyCombination(Keyboard.Key.LControl));
 
-            Bind("debugundokey", 15, Undo, null, new KeyCombination(Keyboard.Key.Back));
+            Bind("debugundokey", 15, Undo, null, new KeyCombination(Keyboard.Key.BackSpace));
 
             Bind("pan_n", 0, () => GameWindow.Camera.Move(new Vector2f(0, -panspeed)), null, new KeyCombination(Keyboard.Key.I));
             Bind("pan_s", 0, () => GameWindow.Camera.Move(new Vector2f(0, panspeed)), null, new KeyCombination(Keyboard.Key.K));

@@ -10,7 +10,7 @@ using SFMLStart;
 using SFMLStart.Data;
 using TimeDRODPOF.TDGame;
 using TimeDRODPOF.TDStructure;
-
+using SFML.System;
 #endregion
 
 namespace TimeDRODPOF.TDEditor
@@ -32,6 +32,7 @@ namespace TimeDRODPOF.TDEditor
         private TDVector2? _rectangleEnd;
         private bool _rectangleMode, _rectanglePainting;
         private TDVector2? _rectangleStart;
+		private readonly Font _myFont = new Font("/usr/share/fonts/TTF/LiberationMono-Regular.ttf");
 
         public TDEEditor(GameWindow mGameWindow)
         {
@@ -512,7 +513,7 @@ namespace TimeDRODPOF.TDEditor
             {
                 var idsString = idsParameter.ToString();
                 if (idsString == "-1") return;
-                text = new Text(idsString, Font.DefaultFont, 10) {Position = mSprite.Position - mSprite.Origin, Style = Text.Styles.Bold, Color = Color.White};
+                text = new Text(idsString, _myFont, 10) {Position = mSprite.Position - mSprite.Origin, Style = Text.Styles.Bold, Color = Color.White};
             }
 
             var idsTargetParameter = mEntity.Parameters.Find(x => x.Name == "mTargetIDs");
@@ -520,7 +521,7 @@ namespace TimeDRODPOF.TDEditor
             {
                 var idsTargetIDs = idsTargetParameter.ToString();
                 if (idsTargetIDs == "-1") return;
-                text = new Text(idsTargetIDs, Font.DefaultFont, 10) {Position = mSprite.Position - mSprite.Origin, Style = Text.Styles.Bold, Color = Color.Blue};
+                text = new Text(idsTargetIDs, _myFont, 10) {Position = mSprite.Position - mSprite.Origin, Style = Text.Styles.Bold, Color = Color.Blue};
             }
 
             if (text == null) return;

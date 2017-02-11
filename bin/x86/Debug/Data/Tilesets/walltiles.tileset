@@ -1,0 +1,9 @@
+31, 31; // Tile width and height
+0; // Tile separation
+
+// Labels (imagine the tile positions)
+fill_corner_nw, fill_corner_n, fill_corner_ne, single, t_s, t_w, end_e, end_tofill_e, end_s, y_w_fill_e_s, y_e_fill_w_s, internal_fill_corner_w_n, internal_double_sw_ne, y_w_fill_w_n, y_n_fill_e_s, x_ne_fill_sw;
+
+fill_corner_w, fill, fill_corner_e, single_corner_nw, single_corner_ne, single_vert, end_tofill_n, single_cross, end_tofill_s, t_e, internal_fill_corner_w_s, internal_fill_corner_e_n, internal_double_se_nw, y_s_fill_w_n, y_n_fill_w_s, x_sw_fill_ne;
+
+fill_corner_sw, fill_corner_s, fill_corner_se, single_corner_sw, single_corner_se, single_horiz, end_n, end_tofill_w, end_w, t_n, internal_fill_corner_e_s, y_w_fill_e_n, y_s_fill_e_n, x_nw_fill_se, x_se_fill_nw;

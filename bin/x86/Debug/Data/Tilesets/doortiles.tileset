@@ -1,0 +1,9 @@
+31, 31; // Tile width and height
+0; // Tile separation
+
+// Labels (imagine the tile positions)
+fill_corner_nw, fill_corner_n, fill_corner_ne, end_s;
+fill_corner_w, fill, fill_corner_e, single_vert;
+fill_corner_sw, fill_corner_s, fill_corner_se, end_n, orb_struck;
+end_e, single_horiz, end_w, single, orb;
+open, orb_off;
